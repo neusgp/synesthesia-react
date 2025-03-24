@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #334155;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+html {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  min-height: 100vh;
+
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  max-height: 100vh;
+  padding: 0 40px 40px 40px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+
+/* 
+Targets color picker*/
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 8px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+
+#main-record-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
