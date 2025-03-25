@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-import { defaultNoteColors } from "./colors";
+import React, { useRef, useEffect } from "react";
 
 //turn to a set (more efficient)
 const getColor = ({ currentNote, palette }) => {
@@ -10,6 +9,7 @@ const getColor = ({ currentNote, palette }) => {
 };
 
 export const Canvas = ({ palette }) => {
+    console.log('palette', palette);
 
     const sketchRef = useRef(null);
 
@@ -48,7 +48,7 @@ export const Canvas = ({ palette }) => {
                                 currentNote = noteScale[midiNum % 12];
                                 currentColor = getColor({
                                     currentNote,
-                                    palette: defaultNoteColors,
+                                    palette,
                                 });
                                 vol = mic.getLevel();
                             }
@@ -60,7 +60,6 @@ export const Canvas = ({ palette }) => {
                     };
 
                     const modelLoaded = () => {
-                        console.log("getting pitch");
                         getPitch();
                     };
 
@@ -117,7 +116,7 @@ export const Canvas = ({ palette }) => {
                 p5Instance.remove(); // Cleanup p5 instance when component is unmounted
             };
         }
-    }, []);
+    }, [palette]);
 
     return (
         <div

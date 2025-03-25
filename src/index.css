@@ -44,6 +44,15 @@ input[type="color"]::-moz-color-swatch {
   border-radius: 8px;
 }
 
+
+#start-modal,
+#main-record-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 input[type="color"]::-webkit-color-swatch-wrapper {
   border: none;
   border-radius: 8px;
@@ -52,13 +61,4 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 8px;
-}
-
-
-#start-modal,
-#main-record-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

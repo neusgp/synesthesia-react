@@ -20,6 +20,8 @@ function App() {
 
   const [noteColors, setNoteColors] = useState(defaultNoteColors);
 
+  console.log(noteColors);
+
   const handleNoteColorChange = ({ key: changedNote, value: newColor }) => {
     const newNoteColors = noteColors.map(({ note, color }) => {
       return note === changedNote ? { note, color: newColor } : { note, color };
@@ -128,7 +130,7 @@ function App() {
                 </div>
               </div>
             ) : (
-              <Canvas />
+              <Canvas palette={noteColors} />
             )}
           </>
         )}
@@ -136,7 +138,7 @@ function App() {
       {showSettings && (
         <div
           id="settings-panel"
-          className="absolute w-full h-full bg-white flex flex-col justify-center items-center ">
+          className="absolute w-full h-full bg-white flex flex-col justify-center items-center bg-white">
           <button
             type="button"
             aria-label="Open settings"
@@ -144,7 +146,7 @@ function App() {
             onClick={() => setShowSettings(false)}>
             <FontAwesomeIcon icon={faClose} />
           </button>
-          <div className="flex flex-col w-[70%] gap-10">
+          <div className="flex flex-col w-[70%] gap-10 bg-white">
             <div>
               <p>Mode</p>
               <select
