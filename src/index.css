@@ -54,6 +54,8 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 8px;
 }
 
+
+#start-modal,
 #main-record-button {
   position: absolute;
   top: 50%;

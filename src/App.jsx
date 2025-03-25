@@ -35,7 +35,7 @@ function App() {
     <>
       <div id="app">
         {!isStart ? (
-          <div className="border border-slate-100 rounded-lg shadow-sm py-20 px-10 flex flex-col items-center gap-8 self-center">
+          <div id='start-modal' className="border border-slate-100 rounded-lg shadow-sm py-20 px-10 flex flex-col items-center gap-8 w-[340px]">
             <h1 className="text-[32px] uppercase text-center">
               welcome to synesthesia
             </h1>
